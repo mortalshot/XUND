@@ -1,16 +1,24 @@
 // === Sizes ===
-$size-container: 1174px;
-$size-layout-desktop: 1366;
-$size-header-height: 89px;
-$size-header-height-mobile: 52px;
+$size-container: 1250px;
+$layoutDesktop: 1440;
+$layoutMobile: 375;
+$size-header-height: 100px;
+$size-header-height-mobile: 70px;
 
 // === Font ===
-$fontSize: 16px;
-$fontColor: #1D1F22;
+$fontSize: 14px;
+$fontColor: #4f4f4f;
 $fontWeight: 400;
-$font: 'Futura PT', Helvetica, Arial, sans-serif;
-$fontSecond: 'Raleway', $font;
+$font: "Open Sans";
+$fontSecond: "Mulish";
 $lineHeight: 140%;
 
 // === Color ===
-
+$orange: #f2994a;
+$orange-hover: #f48828;
+$white: #fff;
+$black: #000;
+$gray: #333;
+$graySecondary: #4f4f4f;
+$silver: #bdbdbd;
+$snow: #fbfbfb;

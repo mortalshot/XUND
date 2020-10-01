@@ -7,11 +7,15 @@
 		font-style: #{$style};
 	}
 }
+// === fonts ===
+@import "fonts";
+
 // === Base ===
-@import "/base/index";
+@import "base/index";
 
 // === Components ===
-@import "/base/index";
+@import "components/index";
 
 // === Pages ===
-@import "/pages/index";
+@import "pages/index";
+

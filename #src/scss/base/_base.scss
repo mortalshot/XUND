@@ -4,22 +4,51 @@ body {
     font-size: $fontSize;
     line-height: $lineHeight;
     color: $fontColor;
+    letter-spacing: 0.2px;
+    overflow-x: hidden;
 
     &.lock {
         overflow: hidden;
     }
 }
 
-.site__main {
-    padding: $size-header-height 0px 0px 0px;
+.site {
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-    @media screen and (max-width: 767px) {
-		padding: $size-header-height-mobile 0px 0px 0px;
-	}
+    &__main {
+        padding: $size-header-height 0px 0px 0px;
+
+        @media screen and (max-width: 767px) {
+            padding: $size-header-height-mobile 0px 0px 0px;
+        }
+    }
+
+    &__footer {
+        margin-top: auto;
+    }
 }
 
 .container {
-    max-width: $container;
+    max-width: 1290px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
+
+    @media screen and (min-width: 992px) {
+        padding: 0 30px;
+        max-width: 1310px;
+    }
+}
+
+.row {
+    display: flex;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }

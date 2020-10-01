@@ -1,0 +1,126 @@
+
+.footer {
+	padding: 32px 0;
+	background-color: $snow;
+
+	@media screen and (max-width: 767px) {
+		padding: 20px 0;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__logo {
+		padding-right: 15px;
+		flex: 1 1 auto;
+
+		@media screen and (max-width: 767px) {
+			padding: 0;
+			margin-bottom: 22px;
+		}
+		@media screen and (max-width: 475px) {
+			max-width: 112px;
+			margin: 0 auto 19px;
+		}
+	}
+
+	&__right {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -5px;
+
+		@media screen and (min-width: 768px) {
+			width: 100%;
+			max-width: 769px;
+		}
+		@media screen and (max-width: 767px) {
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			text-align: center;
+			position: relative;
+		}
+	}
+
+	// .footer__action-card
+	&__action-card {
+		padding: 0 5px;
+		flex: 0 0 154px;
+
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	// .footer__title-h2
+	&__title-h2 {
+		color: $black;
+		margin-bottom: 11px;
+
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	// .footer__text
+	&__text {
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 14px;
+	}
+
+	// .footer__btn
+	&__btn {
+		width: 154px;
+		height: 30px;
+		font-weight: 700;
+		font-size: 12px;
+	}
+
+	// .footer__links
+	&__links {
+		flex: 0 0 150px;
+		padding: 0 5px;
+	}
+
+	// .footer__link
+	&__link {
+		font-size: 12px;
+		line-height: 1;
+		color: $fontColor;
+
+		@media screen and (max-width: 767px) {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			display: inline-block;
+			margin-bottom: 3px;
+		}
+	}
+
+	&__call {
+		@media screen and (min-width: 768px) {
+			display: none;
+		}
+		@media screen and (max-width: 767px) {
+			width: 59px;
+			height: 59px;
+			border: 2px solid $orange;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			right: -13px;
+			top: -52px;
+		}
+	}
+}

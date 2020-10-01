@@ -1,10 +1,15 @@
-	@@include('html-components/_header.html', {
-		"title": "Page name"
-	})
+@@include('html-components/_header.html', {
+"title": "Page name"
+})
 
-	<main class="site__main">
+<main class="site__main">
+	@@include('html-components/_home.html', {
+		"bgColor": "#FCF4DB",
+		"url": "1.png",
+		"title": "Deine ideale Gesunheitsversicherung - sonst nix!",
+		"text": "Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendut nam minimum ponderum.",
+		"btnClass": "d-flex"
+		})
+</main>
 
-	</main>
-
-	@@include('html-components/_footer.html')
-
+@@include('html-components/_footer.html')

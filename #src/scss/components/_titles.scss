@@ -1,0 +1,25 @@
+.title {
+    &-h1 {
+        font-family: $fontSecond;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 35px;
+
+        @media screen and (max-width: $layoutDesktop + 'px') {
+            font-size: calc(20px + 10 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(35 / 30);
+        }
+    }
+
+    &-h2 {
+        font-family: $fontSecond;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+
+        @media screen and (max-width: $layoutDesktop + 'px') {
+            font-size: calc(16px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(27 / 18);
+        }
+    }
+}
