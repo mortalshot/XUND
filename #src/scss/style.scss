@@ -7,17 +7,11 @@
 		font-style: #{$style};
 	}
 }
+// === Base ===
+@import "/base/index";
 
-@import "fonts";
-@import "variables";
-@import "basic-style";
-@import "input";
-@import "_header";
+// === Components ===
+@import "/base/index";
 
-.content {
-	padding: 100px 0px 0px 0px;
-
-	@media screen and (max-width: 767px) {
-		padding: 70px 0px 0px 0px;
-	}
-}
+// === Pages ===
+@import "/pages/index";

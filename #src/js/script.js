@@ -1,5 +1,1 @@
-@@include('vendors.js')
-
-$(document).ready(function () {
-
-});
+@@include('index.js')
