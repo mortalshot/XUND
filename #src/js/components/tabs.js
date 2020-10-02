@@ -10,5 +10,12 @@ $(document).ready(function () {
         $($(this).attr('href')).addClass('tabs-content__item--active');
     });
 
-    $('.tabs-triggers__item:first').click();
+    let tabsList = document.querySelectorAll('.tabs');
+    if (tabsList.length > 0) {
+        for (let i = 0; i < tabsList.length; i++) {
+            const element = tabsList[i];
+            let elementID = $(element).attr('id');
+            $("#" + elementID + " .tabs-triggers__item:first").click();
+        }
+    }
 });

@@ -8,10 +8,10 @@
 		justify-content: center;
 		align-items: center;
 		transition: 0.3s ease all 0s;
+
 		&::after {
 			content: "";
 			display: block;
-			background-color: $color-green;
 			position: absolute;
 			left: 50%;
 			bottom: 0;
@@ -33,5 +33,9 @@
 	// .tabs-content__item
 	&__item {
 		display: none;
+
+		&--active {
+			display: block;
+		}
 	}
 }

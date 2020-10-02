@@ -1,8 +1,14 @@
+// libs
+@@include('libs/slick.min.js')
 @@include('components/webp.js')
+
+// custom
 @@include('components/menu.js')
-/*
 @@include('components/tabs.js')
 @@include('components/accordion.js')
+@@include('components/slider.js')
+
+/*
 @@include('components/popup.js')
 @@include('components/custom-select.js')
 @@include('components/header-fixed.js')

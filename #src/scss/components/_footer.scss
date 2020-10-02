@@ -122,5 +122,8 @@
 			right: -13px;
 			top: -52px;
 		}
+		@media screen and (max-width: 374px) {
+			right: 0;
+		}
 	}
 }

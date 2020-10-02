@@ -9,11 +9,11 @@
     align-items: center;
     height: 40px;
     width: 175px;
+    transition: 0.3s ease all 0s;
 
     &--bg {
         background-color: $orange;
         color: $white;
-        transition: 0.3s ease all 0s;
 
         &:hover {
             background-color: $orange-hover;
@@ -30,7 +30,16 @@
     &--orange {
         color: $orange;
         border: 2px solid $orange;
-        transition: 0.3s ease all 0s;
+
+        &:hover {
+            color: $orange-hover;
+            border-color: $orange-hover;
+        }
+    }
+
+    &--gray {
+        color: $gray;
+        border: 2px solid $gray;
 
         &:hover {
             color: $orange-hover;

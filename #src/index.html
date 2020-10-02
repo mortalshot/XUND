@@ -1,15 +1,121 @@
 @@include('html-components/_header.html', {
-"title": "Page name"
+"title": "Home page"
 })
 
 <main class="site__main">
 	@@include('html-components/_home.html', {
-		"bgColor": "#FCF4DB",
-		"url": "1.png",
-		"title": "Deine ideale Gesunheitsversicherung - sonst nix!",
-		"text": "Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendut nam minimum ponderum.",
-		"btnClass": "d-flex"
-		})
+	"class": "",
+	"bgColor": "#FCF4DB",
+	"url": "1.png",
+	"title": "Deine ideale Gesunheitsversicherung - sonst nix!",
+	"text": "Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendut nam minimum ponderum.",
+	"btnClass": "d-flex"
+	})
+
+	<section class="home-features">
+		<div class="home-features__container container">
+			<div class="home-features__row row">
+				<div class="home-features__item">
+					<div class="home-features__content-wrapper">
+						<div class="home-features__img">
+							<img src="img/home/features/1.svg" alt="">
+						</div>
+						<div class="home-features__title">Was kann Gesundheitsversicherung?</div>
+						<div class="home-features__text">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad
+						</div>
+					</div>
+				</div>
+				<div class="home-features__item">
+					<div class="home-features__content-wrapper">
+						<div class="home-features__img">
+							<img src="img/home/features/2.svg" alt="">
+						</div>
+						<div class="home-features__title">Warum brauchst du Gesundheitsversicherung?</div>
+						<div class="home-features__text">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad
+						</div>
+					</div>
+				</div>
+				<div class="home-features__item">
+					<div class="home-features__content-wrapper">
+						<div class="home-features__img">
+							<img src="img/home/features/3.svg" alt="">
+						</div>
+						<div class="home-features__title">So günstig geht Gesundheitsversicherung?</div>
+						<div class="home-features__text">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad
+						</div>
+					</div>
+				</div>
+				<div class="home-features__item">
+					<div class="home-features__content-wrapper">
+						<div class="home-features__img">
+							<img src="img/home/features/4.png" alt="">
+						</div>
+						<div class="home-features__title">Warum <br> uns wählen?</div>
+						<div class="home-features__text">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="real-example">
+		<div class="real-example__container container">
+			<div class="real-example__header">
+				<div class="real-example__title-h1 title-h1" style="color: #F2826D;">Klingt gut! <br> Aber wie gehts?
+				</div>
+				<div class="real-example__subtitle">See how it works on a real example</div>
+			</div>
+			<div class="real-example__item">
+				<div class="real-example__content">
+					<div class="real-example__content-title title-h1" style="color: #7BC04D;">Beratung & richtige
+						Versicherung</div>
+					<div class="real-example__text">Bedienungen, beratung, wichtigste FAQS. <br>
+						ZB 16 Jahre erfahrung, alle Ö GVs, Ständige Errinerungen - kein cent wird verschwedet.
+						Vorteile vom XUND sofort zeigen</div>
+				</div>
+				<div class="real-example__img">
+					<img src="img/home/examples/1.png" alt="">
+				</div>
+			</div>
+			<div class="real-example__item real-example__item--reverse">
+				<div class="real-example__content">
+					<div class="real-example__content-title title-h1" style="color: #E3AB21;">Nutzt ihre GV den ganzen
+						Jahr</div>
+					<div class="real-example__text">Sie wird regelmaßig über möglichkeiten informiert und deswegen kann
+						sich mehr leisten + kriegt das und das gratis
+
+						<ul class="real-example__text-list">
+							<li>- MRT für nix statt XXX</li>
+							<li>- Top Arzt für nix statt XXX</li>
+							<li>- Spa Hotel für nix statt XXX</li>
+						</ul>
+					</div>
+				</div>
+				<div class="real-example__img">
+					<img src="img/home/examples/2.png" alt="">
+				</div>
+			</div>
+			<div class="real-example__item">
+				<div class="real-example__content">
+					<div class="real-example__content-title title-h1" style="color: #E75034;">Ergebnisse</div>
+					<div class="real-example__text">Sie ist gesund und wird immer gesunder, hat GV effektiv genutzt und
+						hat sogar viel Geld zurück bekommen</div>
+				</div>
+				<div class="real-example__img">
+					<img src="img/home/examples/3.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	@@include('html-components/_do-action.html', {
+	"class": "",
+	"url": "1.png",
+	"title": "Lassen wir uns es besprechen!",
+	"text": "Mit der Gesundheitsversicherung kannst du Ihren Alltag sorgenfrei genießen, gesund bleiben und Geld sparen",
+	"whatever": "home"
+	})
 </main>
 
 @@include('html-components/_footer.html')
