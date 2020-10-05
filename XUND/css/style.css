@@ -141,6 +141,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  font-display: swap;
+  src: url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -1183,8 +1191,140 @@ img {
   line-height: 25px;
 }
 
-.home--kostet .home__img {
-  padding-bottom: 24px;
+.section-price {
+  padding: 94px 0 85px;
+}
+
+.section-price__header {
+  text-align: center;
+  max-width: 698px;
+  margin: 0 auto 86px;
+}
+
+.section-price__title {
+  color: #333;
+  margin-bottom: 46px;
+}
+
+.section-price__text {
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.section-price__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -21px;
+}
+
+.section-price__item {
+  padding: 28px 21px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+}
+
+.section-price__card {
+  min-height: 258px;
+}
+
+.price-card {
+  text-align: center;
+  position: relative;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.price-card:hover .price-card__front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.price-card:hover .price-card__back {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.price-card__front {
+  color: #fff;
+  padding: 25px;
+}
+
+.price-card__front,
+.price-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 15px;
+  -webkit-transition: 0.5s ease all 0s;
+  -o-transition: 0.5s ease all 0s;
+  transition: 0.5s ease all 0s;
+}
+
+.price-card__front-title {
+  margin-bottom: 10px;
+}
+
+.price-card__front-text {
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.price-card__back {
+  background-color: #f2f2f2;
+  padding: 10px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.price-card__back-title {
+  font-family: "Mulish";
+  font-size: 22px;
+  line-height: 34px;
+  color: #74ca39;
+  margin-bottom: 19px;
+}
+
+.price-card__back-text {
+  font-size: 16px;
+  line-height: 25px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.price-card__back-price {
+  font-size: 20px;
+  line-height: 32px;
+  margin-top: 29px;
+}
+
+.price-card__back-accent {
+  font-weight: 700;
+  color: #74ca39;
 }
 
 @media screen and (min-width: 651px) {
@@ -1201,6 +1341,10 @@ img {
 
   .footer__call {
     display: none;
+  }
+
+  .home--kostet .home__img {
+    padding-bottom: 24px;
   }
 }
 
@@ -1226,6 +1370,10 @@ img {
 
   .real-example--transparent .container {
     max-width: 1156px;
+  }
+
+  .section-price__container {
+    max-width: 1258px;
   }
 }
 
@@ -1316,6 +1464,31 @@ img {
     font-size: calc(20px + 2 * ((100vw - 375px) / (1440 - 375)));
     line-height: calc(34 / 22);
   }
+
+  .section-price__text {
+    font-size: calc(14px + 2 * ((100vw - 375px) / (1440 - 375)));
+    line-height: calc(25 / 16);
+  }
+
+  .price-card__back-title {
+    font-size: calc(14px + 8 * ((100vw - 375px) / (1440 - 375)));
+    line-height: calc(34 / 22);
+  }
+
+  .price-card__back-text {
+    font-size: calc(12px + 4 * ((100vw - 375px) / (1440 - 375)));
+    line-height: calc(25 / 16);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section-price__list {
+    margin: 0 -10px;
+  }
+
+  .section-price__item {
+    padding: 15px 10px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1389,6 +1562,12 @@ img {
 
   .beispiel__table .table__body .table__row:last-child .table__cell {
     padding-bottom: 25px;
+  }
+
+  .section-price__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333%;
+            flex: 0 0 33.333%;
   }
 }
 
@@ -1701,6 +1880,45 @@ img {
         -ms-flex: 0 0 40%;
             flex: 0 0 40%;
   }
+
+  .section-price {
+    padding: 65px 0 60px;
+  }
+
+  .section-price__header {
+    margin-bottom: 60px;
+  }
+
+  .section-price__title {
+    margin-bottom: 24px;
+  }
+
+  .section-price__list {
+    margin: 0 -5px;
+  }
+
+  .section-price__item {
+    padding: 5px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+
+  .section-price__card {
+    min-height: 180px;
+  }
+
+  .price-card__back-title {
+    margin-bottom: 10px;
+  }
+
+  .price-card__back-text {
+    -webkit-line-clamp: 3;
+  }
+
+  .price-card__back-price {
+    margin-top: 17px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -1808,6 +2026,18 @@ img {
   .beispiel__slider {
     padding-top: 31px;
   }
+
+  .section-price__header {
+    margin-bottom: 40px;
+  }
+
+  .section-price__card {
+    min-height: 140px;
+  }
+
+  .price-card__back-text {
+    -webkit-line-clamp: 2;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -1843,6 +2073,29 @@ img {
   }
 
   .real-example__img {
+    max-width: 230px;
+  }
+
+  .section-price__list {
+    margin: 0;
+  }
+
+  .section-price__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    padding: 0 0 20px;
+  }
+
+  .section-price__item:last-child {
+    padding-bottom: 0;
+  }
+
+  .price-card__back-title {
+    max-width: 230px;
+  }
+
+  .price-card__back-text {
     max-width: 230px;
   }
 }

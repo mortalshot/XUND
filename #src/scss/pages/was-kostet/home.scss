@@ -1,5 +1,7 @@
 .home--kostet {
     .home__img {
-        padding-bottom: 24px;
+        @media screen and (min-width: 768px) {
+            padding-bottom: 24px;
+        }
     }
 }
