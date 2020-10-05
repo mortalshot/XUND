@@ -1,0 +1,37 @@
+@@include('html-components/_header.html', {
+"title": "Wie gehts"
+})
+
+<main class="site__main">
+	@@include('html-components/_home.html', {
+	"class": "home--kostet",
+	"bgColor": "#F7FCFE",
+	"url": "3.png",
+	"title": "Was kostet Gesunheit wirklich? ",
+	"text": "Most medical procedures cost an arm and a leg. <br> No for you - not anymore",
+	"btnClass": ""
+	})
+
+	<section class="section-price">
+		<div class="section-price__container container">
+			<div class="section-price__header">
+				<div class="section-price__title title-h1">Lorem Ipsum dolor sit amet</div>
+				<div class="section-price__text">Sehe Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendut nam minimum ponderum. Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendut nam minimum ponderum.</div>
+			</div>
+			<div class="section-price__list price-list">
+				<div class="price-list__item"></div>
+				
+			</div>
+		</div>
+	</section>
+
+	@@include('html-components/_do-action.html', {
+	"class": "",
+	"url": "1.png",
+	"title": "Lassen wir uns es besprechen!",
+	"text": "Mit der Gesundheitsversicherung kannst du Ihren Alltag sorgenfrei genießen, gesund bleiben und Geld sparen",
+	"whatever": "was-kostet"
+	})
+</main>
+
+@@include('html-components/_footer.html')
