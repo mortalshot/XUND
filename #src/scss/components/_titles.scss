@@ -22,4 +22,16 @@
             line-height: calc(27 / 18);
         }
     }
+
+    &-2 {
+        font-family: $fontSecond;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 34px;
+
+        @media screen and (max-width: $layoutDesktop + 'px') {
+            font-size: calc(20px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(34 / 20);
+        }
+    }
 }

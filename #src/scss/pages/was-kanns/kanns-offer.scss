@@ -1,0 +1,102 @@
+.kanns-offer {
+	padding: 87px 0 13px;
+
+	@media screen and (max-width: 767px) {
+		padding: 32px 0 0;
+	}
+
+	// .kanns-offer__container
+	&__container {
+		@media screen and (min-width: 992px) {
+			max-width: 1210px;
+		}
+	}
+
+	// .kanns-offer__title
+	&__title {
+		max-width: 505px;
+		text-align: center;
+		margin: 0 auto 80px;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(24px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		}
+		@media screen and (max-width: 767px) {
+			margin-bottom: 52px;
+		}
+	}
+
+	// .kanns-offer__row
+	&__row {
+		align-items: center;
+		padding-bottom: 155px;
+
+		@media screen and (max-width: 991px) {
+			padding-bottom: 80px;
+		}
+		@media screen and (max-width: 767px) {
+			padding-bottom: 50px;
+		}
+		@media screen and (max-width: 575px) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	// .kanns-offer__left
+	&__left {
+		flex: 1 1 auto;
+	}
+
+	&__left-content {
+		max-width: 615px;
+		
+		@media screen and (min-width: 576px) {
+			padding-right: 15px;
+		}
+	}
+
+	// .kanns-offer__accent
+	&__accent {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 32px;
+		margin-bottom: 22px;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(16px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(32 / 20);
+		}
+		@media screen and (max-width: 575px) {
+			font-weight: 600;
+			margin-bottom: 12px;
+		}
+	}
+
+	// .kanns-offer__text
+	&__text {
+		font-size: 20px;
+		line-height: 32px;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(16px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(32 / 20);
+		}
+	}
+
+	// .kanns-offer__right
+	&__right {
+		flex: 0 0 32%;
+
+		@media screen and (max-width: 767px) {
+			flex: 0 0 40%;
+		}
+	}
+
+	// .kanns-offer__img
+	&__img {
+		@media screen and (max-width: 575px) {
+			max-width: 270px;
+			margin: 0 auto 40px;
+		}
+	}
+}

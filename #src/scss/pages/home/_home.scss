@@ -23,7 +23,7 @@
 
 	// .home__column
 	&__column {
-		flex: 1 0 50%;
+		flex: 0 0 50%;
 
 		&--text {
 			flex: auto;
@@ -46,6 +46,9 @@
 
 	// .home__img
 	&__img {
+		display: flex;
+		justify-content: center;
+
 		@media screen and (max-width: 767px) {
 			max-width: 60%;
 			margin: 0 auto 26px;
