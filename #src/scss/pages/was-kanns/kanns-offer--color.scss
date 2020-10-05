@@ -1,0 +1,146 @@
+.kanns-offer--color {
+}
+
+.kanns-offer--green {
+	.kanns-offer {
+		&__title {
+			color: $greenDarkModerate;
+		}
+
+		&__accent {
+			color: $greenSecondary;
+		}
+	}
+
+	.kanns-features {
+		&__title {
+			color: $greenDarkModerate;
+		}
+
+		&__wrapper {
+			background-color: $greenLightGrayish;
+			border-color: $greenSecondary;
+		}
+	}
+}
+
+.kanns-offer--red {
+	.kanns-offer {
+		&__title {
+			color: $red;
+		}
+
+		&__accent {
+			color: $red;
+		}
+	}
+
+	.kanns-features {
+		&__title {
+			color: $redSoft;
+		}
+
+		&__wrapper {
+			background-color: rgba($color: $red, $alpha: 0.1);
+			border-color: $red;
+		}
+
+		&__list-item::before {
+			background-color: $red;
+		}
+	}
+}
+
+.kanns-offer--orange-bright {
+	.kanns-offer {
+		&__title {
+			color: $orangeVivid;
+		}
+
+		&__accent {
+			color: $orangeBright;
+		}
+	}
+
+	.kanns-features {
+		&__title {
+			color: $orangeBright;
+		}
+
+		&__wrapper {
+			background-color: rgba($color: $orangeBright, $alpha: 0.1);
+			border-color: $orangeBright;
+		}
+
+		&__list-item::before {
+			background-color: $orangeBright;
+		}
+	}
+}
+
+.kanns-offer--blue-dark {
+	.kanns-offer {
+		&__title {
+			color: $BlueDark;
+		}
+
+		&__accent {
+			color: $BlueDark;
+		}
+	}
+
+	.kanns-features {
+		&__title {
+			color: $BlueDark;
+
+			&-2 {
+				color: $BlueDark;
+			}
+		}
+
+		&__wrapper {
+			background-color: rgba($color: $BlueDark, $alpha: 0.1);
+			border-color: $BlueDark;
+		}
+
+		&__list-item::before {
+			background-color: $BlueDark;
+		}
+	}
+}
+
+.kanns-offer--cyan-dark {
+	.kanns-offer {
+		&__title {
+			color: $cyanDark;
+		}
+
+		&__accent {
+			color: $cyanDark;
+		}
+	}
+
+	.kanns-features {
+		&__title {
+			color: $cyanDark;
+
+			&-2 {
+				color: $cyanDark;
+			}
+		}
+
+		&__wrapper {
+			background-color: rgba($color: $cyanDark, $alpha: 0.1);
+			border-color: $cyanDark;
+		}
+
+		&__list-item::before {
+			background-color: $cyanDark;
+		}
+	}
+
+	span {
+		font-weight: 700;
+		color: $cyanDark;
+	}
+}

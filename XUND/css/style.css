@@ -337,6 +337,14 @@ img {
   background: url("../img/icons/hospital.svg") center no-repeat;
 }
 
+.icon-house {
+  display: inline-block;
+  vertical-align: middle;
+  width: 92px;
+  height: 82px;
+  background: url("../img/icons/house.svg") center no-repeat;
+}
+
 .arrow-right {
   display: inline-block;
   vertical-align: middle;
@@ -1534,6 +1542,28 @@ img {
           flex: 0 0 32%;
 }
 
+.kanns-offer__house {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 38px;
+}
+
+.kanns-offer__house i {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 109px;
+          flex: 0 0 109px;
+}
+
+.kanns-offer__house-text {
+  color: #333;
+  max-width: 256px;
+  margin: 0 0px 0px 25px;
+}
+
 .kanns-offer--green .kanns-offer__title {
   color: #5fa132;
 }
@@ -1549,6 +1579,103 @@ img {
 .kanns-offer--green .kanns-features__wrapper {
   background-color: #f7fbf4;
   border-color: #a9d18e;
+}
+
+.kanns-offer--red .kanns-offer__title {
+  color: #f2826d;
+}
+
+.kanns-offer--red .kanns-offer__accent {
+  color: #f2826d;
+}
+
+.kanns-offer--red .kanns-features__title {
+  color: #f47861;
+}
+
+.kanns-offer--red .kanns-features__wrapper {
+  background-color: rgba(242, 130, 109, 0.1);
+  border-color: #f2826d;
+}
+
+.kanns-offer--red .kanns-features__list-item::before {
+  background-color: #f2826d;
+}
+
+.kanns-offer--orange-bright .kanns-offer__title {
+  color: #e1a614;
+}
+
+.kanns-offer--orange-bright .kanns-offer__accent {
+  color: #efbc3f;
+}
+
+.kanns-offer--orange-bright .kanns-features__title {
+  color: #efbc3f;
+}
+
+.kanns-offer--orange-bright .kanns-features__wrapper {
+  background-color: rgba(239, 188, 63, 0.1);
+  border-color: #efbc3f;
+}
+
+.kanns-offer--orange-bright .kanns-features__list-item::before {
+  background-color: #efbc3f;
+}
+
+.kanns-offer--blue-dark .kanns-offer__title {
+  color: #3b5673;
+}
+
+.kanns-offer--blue-dark .kanns-offer__accent {
+  color: #3b5673;
+}
+
+.kanns-offer--blue-dark .kanns-features__title {
+  color: #3b5673;
+}
+
+.kanns-offer--blue-dark .kanns-features__title-2 {
+  color: #3b5673;
+}
+
+.kanns-offer--blue-dark .kanns-features__wrapper {
+  background-color: rgba(59, 86, 115, 0.1);
+  border-color: #3b5673;
+}
+
+.kanns-offer--blue-dark .kanns-features__list-item::before {
+  background-color: #3b5673;
+}
+
+.kanns-offer--cyan-dark .kanns-offer__title {
+  color: #109294;
+}
+
+.kanns-offer--cyan-dark .kanns-offer__accent {
+  color: #109294;
+}
+
+.kanns-offer--cyan-dark .kanns-features__title {
+  color: #109294;
+}
+
+.kanns-offer--cyan-dark .kanns-features__title-2 {
+  color: #109294;
+}
+
+.kanns-offer--cyan-dark .kanns-features__wrapper {
+  background-color: rgba(16, 146, 148, 0.1);
+  border-color: #109294;
+}
+
+.kanns-offer--cyan-dark .kanns-features__list-item::before {
+  background-color: #109294;
+}
+
+.kanns-offer--cyan-dark span {
+  font-weight: 700;
+  color: #109294;
 }
 
 .kanns-features__row {
@@ -1596,13 +1723,16 @@ img {
   margin-bottom: 20px;
 }
 
-.kanns-features__list-item {
-  position: relative;
+.kanns-features__list li {
   padding-left: 22px;
   color: #333;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 15px;
+}
+
+.kanns-features__list-item {
+  position: relative;
 }
 
 .kanns-features__list-item::before {
@@ -1615,6 +1745,30 @@ img {
   position: absolute;
   left: 0;
   top: 5px;
+}
+
+.kanns-features__text {
+  color: #333;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.kanns-features__text-wrapper {
+  margin-bottom: 40px;
+}
+
+.kanns-features__text-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.kanns-features__title-2 {
+  text-align: center;
+}
+
+.kanns-features__text-large {
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
 }
 
 @media screen and (min-width: 576px) {
@@ -1851,9 +2005,14 @@ img {
     line-height: calc(32 / 20);
   }
 
-  .kanns-features__list-item {
+  .kanns-features__list li {
     font-size: calc(14px + 2 * ((100vw - 375px) / (1440 - 375)));
     line-height: calc(22 / 16);
+  }
+
+  .kanns-features__text-large {
+    font-size: calc(16px + 4 * ((100vw - 375px) / (1440 - 375)));
+    line-height: calc(32 / 20);
   }
 }
 
@@ -2381,6 +2540,25 @@ img {
             flex: 0 0 40%;
   }
 
+  .kanns-offer__house {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .kanns-offer__house i {
+    -webkit-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+            transform: scale(0.6);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90px;
+            flex: 0 0 90px;
+  }
+
+  .kanns-offer__house-text {
+    margin: 0;
+  }
+
   .kanns-features__row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2398,6 +2576,10 @@ img {
 
   .kanns-features__wrapper {
     padding: 22px 18px;
+  }
+
+  .kanns-features__text-wrapper {
+    margin-bottom: 35px;
   }
 }
 
@@ -2586,6 +2768,10 @@ img {
     margin: 0 auto 40px;
   }
 
+  .kanns-offer__house {
+    margin-top: 5px;
+  }
+
   .kanns-features__row {
     margin: 0;
   }
@@ -2599,7 +2785,7 @@ img {
     padding: 0 0 25px;
   }
 
-  .kanns-features__list-item {
+  .kanns-features__list li {
     padding-left: 20px;
   }
 

@@ -99,4 +99,36 @@
 			margin: 0 auto 40px;
 		}
 	}
+
+	&__house {
+		display: flex;
+		align-items: flex-end;
+		margin-top: 38px;
+
+		@media screen and (max-width: 767px) {
+			align-items: center;
+		}
+		@media screen and (max-width: 575px) {
+			margin-top: 5px;
+		}
+
+		i {
+			flex: 0 0 109px;
+			
+			@media screen and (max-width: 767px) {
+				transform: scale(0.6);
+				flex: 0 0 90px;
+			}
+		}
+	}
+
+	&__house-text {
+		color: $gray;
+		max-width: 256px;
+		margin: 0 0px 0px 25px;
+
+		@media screen and (max-width: 767px) {
+			margin: 0;	
+		}
+	}
 }
