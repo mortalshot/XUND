@@ -257,7 +257,6 @@ $(document).ready(function () {
         }
     });
 })
-
 $(document).ready(function () {
     mediaQueryMdMin = window.matchMedia('(min-width: 768px)');
     
@@ -277,4 +276,6 @@ $(document).ready(function () {
 
     }
 });
+
+
 */

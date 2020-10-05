@@ -46,4 +46,11 @@
             border-color: $orange-hover;
         }
     }
+
+    &--text {
+        color: $greenSecondary;
+        font-size: 14px;
+        line-height: 23px;
+        display: inline-block;
+    }
 }

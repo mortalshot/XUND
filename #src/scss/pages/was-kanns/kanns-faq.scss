@@ -1,0 +1,245 @@
+.kanns-faq {
+	padding: 145px 0 56px;
+
+	@media screen and (max-width: 767px) {
+		padding: 90px 0px 20px 0px;
+	}
+
+	// .kanns-faq__container
+	&__container {
+		@media screen and (min-width: 992px) {
+			max-width: 1210px;
+		}
+	}
+
+	// .kanns-faq__accordion-title
+	&__accordion-title {
+		display: flex;
+		align-items: center;
+		height: 90px;
+		border-radius: 4px;
+		margin-bottom: 15px;
+		color: $white;
+
+		@media screen and (max-width: 575px) {
+			height: 98px;
+			margin-bottom: 7px;
+		}
+
+		&::before {
+			display: none;
+		}
+		&::after {
+			width: 22px;
+			height: 30px;
+			background: url(../img/icons/accordion-triangle-white.svg) no-repeat center/cover;
+			right: 40px;
+			transform: rotate(0) translate(0, -50%);
+			transform-origin: 6px 0px;
+
+			@media screen and (max-width: 991px) {
+				right: 25px;
+			}
+			@media screen and (max-width: 767px) {
+				width: 15px;
+				height: 20px;
+			}
+		}
+
+		&.active {
+			&::after {
+				transform: rotate(90deg) translate(0, -50%);
+			}
+		}
+	}
+
+	&__accordion-text {
+		padding: 0;
+		margin-bottom: 20px;
+
+		@media screen and (max-width: 450px) {
+			padding: 0;
+		}
+	}
+
+	// .kanns-faq__title-img
+	&__title-img {
+		flex: 0 0 100px;
+		display: flex;
+		justify-content: center;
+
+		@media screen and (max-width: 991px) {
+			flex: 0 0 50px;
+		}
+		@media screen and (max-width: 575px) {
+			flex: 0 0 100px;
+		}
+	}
+
+	// .kanns-faq__title-title
+	&__title-title {
+		flex: 1 1 auto;
+		font-family: $fontSecond;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 35px;
+		padding-right: 15px;
+		padding: 0px 15px 0px 25px;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(16px + 14 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(35 / 30);
+		}
+		@media screen and (max-width: 991px) {
+			padding-left: 15px;
+		}
+		@media screen and (max-width: 575px) {
+			padding-right: 50px;
+			padding-left: 0;
+			font-size: 24px;
+		}
+	}
+
+	// .kanns-faq__title-text
+	&__title-text {
+		padding-right: 86px;
+		font-size: 20px;
+		line-height: 32px;
+		text-align: right;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(12px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(32 / 20);
+		}
+		@media screen and (max-width: 991px) {
+			padding-right: 50px;
+		}
+		@media screen and (max-width: 575px) {
+			display: none;
+		}
+	}
+
+	// .kanns-faq__table
+	&__table {
+		border: 3px solid $greenSecondary;
+		border-radius: 5px;
+		padding: 35px 47px;
+
+		@media screen and (max-width: 991px) {
+			padding: 30px;
+		}
+		@media screen and (max-width: 767px) {
+			padding: 25px;
+		}
+
+		// .kanns-faq__table-row
+		&-row {
+			justify-content: space-between;
+			margin: 0 -20px;
+
+			@media screen and (max-width: 767px) {
+				margin: 0 -15px;
+			}
+			@media screen and (max-width: 650px) {
+				margin: 0;
+				flex-direction: column;
+			}
+		}
+
+		// .kanns-faq__table-left
+		&-left {
+			flex: 1 1 auto;
+            padding: 0 20px;
+            
+			@media screen and (max-width: 767px) {
+				padding: 0 15px;
+			}
+			@media screen and (max-width: 650px) {
+				padding: 0;
+			}
+		}
+
+		&-left-wrapper {
+			@media screen and (min-width: 651px) {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				max-width: 513px;
+			}
+		}
+
+		// .kanns-faq__table-right
+		&-right {
+			flex: 0 0 39.2%;
+            padding: 0 20px;
+            
+			@media screen and (max-width: 767px) {
+				padding: 0 15px;
+			}
+			@media screen and (max-width: 650px) {
+				padding: 0;
+			}
+		}
+
+		// .kanns-faq__table-title
+		&-title {
+			font-family: $fontSecond;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 27px;
+			color: $gray;
+			margin-bottom: 27px;
+
+			@media screen and (max-width: $layoutDesktop + "px") {
+				font-size: calc(14px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: calc(27 / 18);
+			}
+			@media screen and (max-width: 767px) {
+				margin-bottom: 14px;
+			}
+		}
+
+		// .kanns-faq__table-text
+		&-text {
+			margin-bottom: 42px;
+
+			@media screen and (max-width: $layoutDesktop + "px") {
+				font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: calc(20 / 14);
+			}
+			@media screen and (max-width: 650px) {
+				margin-bottom: 18px;
+			}
+		}
+
+		// .kanns-faq__table-list
+		&-list {
+			@media screen and (max-width: 650px) {
+				padding-left: 20px;
+				margin-bottom: 16px;
+			}
+
+			// .kanns-faq__table-list-item
+			&-item {
+				list-style-type: disc;
+				color: $gray;
+			}
+		}
+
+		&-btn {
+			font-weight: 600;
+			letter-spacing: 0.2px;
+
+			&--desktop {
+				@media screen and (max-width: 650px) {
+					display: none;
+				}
+			}
+			&--mobile {
+				@media screen and (min-width: 651px) {
+					display: none;
+				}
+			}
+		}
+	}
+}

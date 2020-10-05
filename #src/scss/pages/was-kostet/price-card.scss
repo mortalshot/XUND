@@ -1,0 +1,115 @@
+.price-card {
+	text-align: center;
+	position: relative;
+	perspective: 1000px;
+	&:hover {
+		.price-card__front {
+			transform: rotateY(180deg);
+		}
+		.price-card__back {
+			transform: rotateY(360deg);
+		}
+	}
+
+	// .price-card__front
+	&__front {
+		color: $white;
+		padding: 25px;
+	}
+
+	&__front,
+	&__back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		backface-visibility: hidden;
+		border-radius: 15px;
+		transition: 0.5s ease all 0s;
+	}
+
+	// .price-card__front-title
+	&__front-title {
+		margin-bottom: 10px;
+	}
+
+	// .price-card__front-text
+	&__front-text {
+		font-size: 16px;
+		line-height: 25px;
+	}
+
+	// .price-card__back
+	&__back {
+		background-color: $grayLight;
+		padding: 10px;
+		transform: rotateY(180deg);
+	}
+
+	// .price-card__back-title
+	&__back-title {
+		font-family: $fontSecond;
+		font-size: 22px;
+		line-height: 34px;
+		color: $greenModerate;
+		margin-bottom: 19px;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(14px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(34 / 22);
+		}
+		@media screen and (max-width: 767px) {
+			margin-bottom: 10px;
+		}
+		@media screen and (max-width: 450px) {
+			max-width: 230px;
+		}
+	}
+
+	// .price-card__back-text
+	&__back-text {
+		font-size: 16px;
+		line-height: 25px;
+		display: -webkit-box;
+		-webkit-line-clamp: 5;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(25 / 16);
+		}
+		@media screen and (max-width: 767px) {
+			-webkit-line-clamp: 3;
+		}
+		@media screen and (max-width: 575px) {
+			-webkit-line-clamp: 2;
+		}
+		@media screen and (max-width: 450px) {
+			max-width: 230px;
+		}
+	}
+
+	// .price-card__back-price
+	&__back-price {
+		font-size: 20px;
+		line-height: 32px;
+		margin-top: 29px;
+
+		@media screen and (max-width: 767px) {
+			margin-top: 17px;
+		}
+	}
+
+	// .price-card__back-accent
+	&__back-accent {
+		font-weight: 700;
+		color: $greenModerate;
+	}
+}

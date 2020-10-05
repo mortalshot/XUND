@@ -404,6 +404,13 @@ img {
   border-color: #f48828;
 }
 
+.btn--text {
+  color: #a9d18e;
+  font-size: 14px;
+  line-height: 23px;
+  display: inline-block;
+}
+
 .title-h1 {
   font-family: "Mulish";
   font-weight: 700;
@@ -1017,26 +1024,6 @@ img {
           justify-content: space-between;
 }
 
-.beispiel__tabs .tabs-triggers__item--green {
-  background-color: #a9d18e;
-}
-
-.beispiel__tabs .tabs-triggers__item--red {
-  background-color: #f2826d;
-}
-
-.beispiel__tabs .tabs-triggers__item--orange-bright {
-  background-color: #efbc3f;
-}
-
-.beispiel__tabs .tabs-triggers__item--blue-dark {
-  background-color: #3b5673;
-}
-
-.beispiel__tabs .tabs-triggers__item--cyan-dark {
-  background-color: #109294;
-}
-
 .beispiel__tabs .tabs-triggers__title {
   font-family: "Mulish";
   font-weight: 700;
@@ -1172,6 +1159,26 @@ img {
 
 .beispiel__table .table__body .table__row:last-child .table__cell {
   padding-bottom: 35px;
+}
+
+.tabs-triggers__item--green {
+  background-color: #a9d18e;
+}
+
+.tabs-triggers__item--red {
+  background-color: #f2826d;
+}
+
+.tabs-triggers__item--orange-bright {
+  background-color: #efbc3f;
+}
+
+.tabs-triggers__item--blue-dark {
+  background-color: #3b5673;
+}
+
+.tabs-triggers__item--cyan-dark {
+  background-color: #109294;
 }
 
 .real-example--transparent {
@@ -1327,8 +1334,152 @@ img {
   color: #74ca39;
 }
 
+.kanns-faq {
+  padding: 145px 0 56px;
+}
+
+.kanns-faq__accordion-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.kanns-faq__accordion-title::before {
+  display: none;
+}
+
+.kanns-faq__accordion-title::after {
+  width: 22px;
+  height: 30px;
+  background: url(../img/icons/accordion-triangle-white.svg) no-repeat center/cover;
+  right: 40px;
+  -webkit-transform: rotate(0) translate(0, -50%);
+      -ms-transform: rotate(0) translate(0, -50%);
+          transform: rotate(0) translate(0, -50%);
+  -webkit-transform-origin: 6px 0px;
+      -ms-transform-origin: 6px 0px;
+          transform-origin: 6px 0px;
+}
+
+.kanns-faq__accordion-title.active::after {
+  -webkit-transform: rotate(90deg) translate(0, -50%);
+      -ms-transform: rotate(90deg) translate(0, -50%);
+          transform: rotate(90deg) translate(0, -50%);
+}
+
+.kanns-faq__accordion-text {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.kanns-faq__title-img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kanns-faq__title-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  padding-right: 15px;
+  padding: 0px 15px 0px 25px;
+}
+
+.kanns-faq__title-text {
+  padding-right: 86px;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: right;
+}
+
+.kanns-faq__table {
+  border: 3px solid #a9d18e;
+  border-radius: 5px;
+  padding: 35px 47px;
+}
+
+.kanns-faq__table-row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 -20px;
+}
+
+.kanns-faq__table-left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0 20px;
+}
+
+.kanns-faq__table-right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 39.2%;
+          flex: 0 0 39.2%;
+  padding: 0 20px;
+}
+
+.kanns-faq__table-title {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #333;
+  margin-bottom: 27px;
+}
+
+.kanns-faq__table-text {
+  margin-bottom: 42px;
+}
+
+.kanns-faq__table-list-item {
+  list-style-type: disc;
+  color: #333;
+}
+
+.kanns-faq__table-btn {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
 @media screen and (min-width: 651px) {
   .beispiel__tabs .accordion__title {
+    display: none;
+  }
+
+  .kanns-faq__table-left-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    max-width: 513px;
+  }
+
+  .kanns-faq__table-btn--mobile {
     display: none;
   }
 }
@@ -1374,6 +1525,10 @@ img {
 
   .section-price__container {
     max-width: 1258px;
+  }
+
+  .kanns-faq__container {
+    max-width: 1210px;
   }
 }
 
@@ -1479,6 +1634,26 @@ img {
     font-size: calc(12px + 4 * ((100vw - 375px) / (1440 - 375)));
     line-height: calc(25 / 16);
   }
+
+  .kanns-faq__title-title {
+    font-size: calc(16px + 14 * ((100vw - 375px) / (1440 - 375)));
+    line-height: calc(35 / 30);
+  }
+
+  .kanns-faq__title-text {
+    font-size: calc(12px + 8 * ((100vw - 375px) / (1440 - 375)));
+    line-height: calc(32 / 20);
+  }
+
+  .kanns-faq__table-title {
+    font-size: calc(14px + 4 * ((100vw - 375px) / (1440 - 375)));
+    line-height: calc(27 / 18);
+  }
+
+  .kanns-faq__table-text {
+    font-size: calc(12px + 2 * ((100vw - 375px) / (1440 - 375)));
+    line-height: calc(20 / 14);
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1568,6 +1743,28 @@ img {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 33.333%;
             flex: 0 0 33.333%;
+  }
+
+  .kanns-faq__accordion-title::after {
+    right: 25px;
+  }
+
+  .kanns-faq__title-img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50px;
+            flex: 0 0 50px;
+  }
+
+  .kanns-faq__title-title {
+    padding-left: 15px;
+  }
+
+  .kanns-faq__title-text {
+    padding-right: 50px;
+  }
+
+  .kanns-faq__table {
+    padding: 30px;
   }
 }
 
@@ -1919,6 +2116,35 @@ img {
   .price-card__back-price {
     margin-top: 17px;
   }
+
+  .kanns-faq {
+    padding: 90px 0px 20px 0px;
+  }
+
+  .kanns-faq__accordion-title::after {
+    width: 15px;
+    height: 20px;
+  }
+
+  .kanns-faq__table {
+    padding: 25px;
+  }
+
+  .kanns-faq__table-row {
+    margin: 0 -15px;
+  }
+
+  .kanns-faq__table-left {
+    padding: 0 15px;
+  }
+
+  .kanns-faq__table-right {
+    padding: 0 15px;
+  }
+
+  .kanns-faq__table-title {
+    margin-bottom: 14px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -1946,6 +2172,35 @@ img {
 
   .beispiel__table .table__cell.privat,
   .beispiel__table .table__cell.insurance {
+    display: none;
+  }
+
+  .kanns-faq__table-row {
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .kanns-faq__table-left {
+    padding: 0;
+  }
+
+  .kanns-faq__table-right {
+    padding: 0;
+  }
+
+  .kanns-faq__table-text {
+    margin-bottom: 18px;
+  }
+
+  .kanns-faq__table-list {
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+
+  .kanns-faq__table-btn--desktop {
     display: none;
   }
 }
@@ -2038,6 +2293,27 @@ img {
   .price-card__back-text {
     -webkit-line-clamp: 2;
   }
+
+  .kanns-faq__accordion-title {
+    height: 98px;
+    margin-bottom: 7px;
+  }
+
+  .kanns-faq__title-img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100px;
+            flex: 0 0 100px;
+  }
+
+  .kanns-faq__title-title {
+    padding-right: 50px;
+    padding-left: 0;
+    font-size: 24px;
+  }
+
+  .kanns-faq__title-text {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -2097,6 +2373,10 @@ img {
 
   .price-card__back-text {
     max-width: 230px;
+  }
+
+  .kanns-faq__accordion-text {
+    padding: 0;
   }
 }
 
