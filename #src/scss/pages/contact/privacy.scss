@@ -1,0 +1,14 @@
+.privacy {
+	font-size: 12px;
+	line-height: 18px;
+
+	@media screen and (max-width: $layoutDesktop + 'px') {
+		font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(18 / 12);
+	}
+
+	// .privacy__link
+	&__link {
+		color: $fontColor;
+	}
+}

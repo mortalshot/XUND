@@ -1,0 +1,82 @@
+@@include('html-components/_header.html', {
+"title": "Kontakt"
+})
+
+<main class="site__main">
+	<section class="contact">
+		<div class="contact__container container">
+			<div class="contact__header">
+				<h1 class="contact__title title-h1">Kontaktiere uns</h1>
+				<div class="contact__text">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no
+					suscipit quaerendut nam minimum ponderum.</div>
+			</div>
+			<div class="contact__row row">
+				<div class="contact__left">
+					<div class="contact__content">
+						<div class="contact__content-title title-2">Get in touch for a personal offer</div>
+						<div class="contact__content-text">Et has minim elitr intellegat. Mea aeterno eleifend antiopam
+							ad, nam no suscipit quaerendut nam minimum ponderum.</div>
+					</div>
+				</div>
+				<div class="contact__right">
+					<form id="contactForm" action="" class="contact__form">
+						<div class="contact__inputs">
+							<div class="row">
+								<div class="input-wrapper">
+									<input type="text" id="Name" class="input-wrapper__text-input">
+									<label for="Name" class="input-wrapper__text-label">Name*</label>
+								</div>
+								<div class="input-wrapper">
+									<input type="email" id="Email" class="input-wrapper__text-input">
+									<label for="Email" class="input-wrapper__text-label">Email*</label>
+								</div>
+							</div>
+							<div class="input-wrapper input-wrapper--textarea">
+								<textarea name="Nachricht" id="Nachricht" class="input-wrapper__text-input input-wrapper__text-input--textarea"
+									placeholder="Nachricht"></textarea>
+							</div>
+						</div>
+						<div class="privacy">
+							<a href="" class="privacy__link">Privacy Notice.</a>
+							Mea aeterno eleifend antiopam ad, nam no suscipit quaerendut nam minimum ponderum.</div>
+						<div class="contact__btn">
+							<button type="submit" class="btn btn--bg">Senden</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="map">
+		<div class="map__container container">
+			<div class="map__row row">
+				<div class="map__left">
+					<div class="map__img">
+						<img src="img/contacts/1.png" alt="">
+					</div>
+				</div>
+				<div class="map__right">
+					<div class="map__wrapper">
+						<div class="map__title title-h1">So findest du XUND</div>
+						<div class="map__text">Good location, nice transport and parking</div>
+						<ul class="map__list">
+							<li class="map__list-item">- ubahn</li>
+							<li class="map__list-item">- busses and trams</li>
+							<li class="map__list-item">- parking under opera</li>
+						</ul>
+						<div class="map__contacts">
+							<div class="map__contacts-title">XUND Versicherungmakler KG</div>
+							<div class="map__contacts-text">Walfischgasse 8/Top 17, 1010 Wien</div>
+							<div class="map__contacts-text">TEL:<a href="tel: 43676123456" class="map__contacts-link">43 676 123 456</a></div>
+							<div class="map__contacts-text"><a href="mailto: bleib@xund.wien" class="map__contacts-link">bleib@xund.wien</a></div>
+							<div class="map__contacts-text"><a href="mailto: bleib@xund.wien" class="map__contacts-link">www.xund.wien</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+@@include('html-components/_footer.html')
