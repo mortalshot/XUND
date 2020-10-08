@@ -36,4 +36,15 @@ $(document).ready(function () {
     };
 
     select();
+
+    if ($(".custom-select")) {
+        $(document).mouseup(function (e) {
+            if ($(".custom-select").hasClass('open')) {
+                var div = $(".custom-select");
+                if (!div.is(e.target) && div.has(e.target).length === 0) {
+                    div.removeClass('open');
+                }
+            }
+        });
+    }
 })

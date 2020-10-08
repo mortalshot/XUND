@@ -60,6 +60,7 @@
         position: relative;
         line-height: 24px;
         user-select: none;
+        display: block;
 
         &::before {
             content: "";
@@ -68,8 +69,8 @@
             position: absolute;
             top: 0;
             left: 0;
-            background: #fff;
-            border: 1px solid #000;
+            background: transparent;
+            border: 3px solid #000;
         }
     }
 }
@@ -85,8 +86,7 @@
 }
 .input-wrapper--check {
     input[type="checkbox"]:checked + label:before {
-        content: "\2713";
-        line-height: 23px;
-        padding-left: 4px;
+        content: "";
+        background: url(../img/icons/input-check.svg) no-repeat center/cover;
     }
 }

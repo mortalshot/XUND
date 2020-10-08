@@ -66,6 +66,8 @@
 
 	// .home__content
 	&__content {
+		max-width: 460px;
+
 		@media screen and (max-width: 767px) {
 			text-align: center;
 			max-width: 60%;
@@ -112,6 +114,12 @@
 
 		&.d-flex {
 			display: inline-flex;
+		}
+	}
+
+	&--home {
+		.home__content {
+			max-width: 540px;
 		}
 	}
 }

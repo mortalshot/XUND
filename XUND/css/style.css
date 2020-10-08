@@ -488,6 +488,13 @@ img {
   line-height: 34px;
 }
 
+.title-XL {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 55px;
+}
+
 .tabs-triggers {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -706,6 +713,7 @@ img {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  display: block;
 }
 
 .input-wrapper__label::before {
@@ -715,8 +723,8 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  background: #fff;
-  border: 1px solid #000;
+  background: transparent;
+  border: 3px solid #000;
 }
 
 .input-wrapper--radio input[type="radio"] + label:before {
@@ -728,9 +736,128 @@ img {
 }
 
 .input-wrapper--check input[type="checkbox"]:checked + label:before {
-  content: "\2713";
-  line-height: 23px;
-  padding-left: 4px;
+  content: "";
+  background: url(../img/icons/input-check.svg) no-repeat center/cover;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.custom-select-wrapper--bottom .custom-select__custom-options {
+  top: 100%;
+  -webkit-transform: translate(6px, 0);
+      -ms-transform: translate(6px, 0);
+          transform: translate(6px, 0);
+}
+
+.custom-select-wrapper--left .custom-select__custom-options {
+  left: 0;
+  right: auto;
+}
+
+.custom-select-wrapper--right .custom-select__custom-options {
+  left: auto;
+  right: 0;
+}
+
+.custom-select {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.custom-select__trigger {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.custom-select__trigger span {
+  margin: 0px 11px 0px 6px;
+}
+
+.custom-select__custom-options {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  background: #fefefe;
+  -webkit-box-shadow: 0px 4px 11px rgba(29, 31, 34, 0.1);
+          box-shadow: 0px 4px 11px rgba(29, 31, 34, 0.1);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.custom-select.open .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.custom-options__option {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: #fefefe;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  border-bottom: 1px solid;
+  padding: 7px 28px;
+}
+
+.custom-options__option:hover {
+  cursor: pointer;
+}
+
+.custom-options__option:last-child {
+  border-bottom-color: transparent;
+}
+
+.open .arrow-right::before {
+  -webkit-transform: translate(0, -50%) rotate(40deg);
+      -ms-transform: translate(0, -50%) rotate(40deg);
+          transform: translate(0, -50%) rotate(40deg);
+}
+
+.open .arrow-right::after {
+  -webkit-transform: translate(0, -50%) rotate(-40deg);
+      -ms-transform: translate(0, -50%) rotate(-40deg);
+          transform: translate(0, -50%) rotate(-40deg);
 }
 
 .logo__link {
@@ -935,6 +1062,10 @@ img {
           justify-content: center;
 }
 
+.home__content {
+  max-width: 460px;
+}
+
 .home__title {
   margin-bottom: 24px;
   color: #000;
@@ -955,6 +1086,10 @@ img {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.home--home .home__content {
+  max-width: 540px;
 }
 
 .home-features {
@@ -2371,6 +2506,381 @@ img {
   color: #4f4f4f;
 }
 
+.formular {
+  padding: 112px 0;
+}
+
+.formular__step-two {
+  display: none;
+  max-width: 708px;
+  margin: 0 auto;
+}
+
+.formular__header {
+  text-align: center;
+  margin-bottom: 66px;
+}
+
+.formular__title {
+  margin-bottom: 25px;
+}
+
+.formular__text-step {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #363535;
+}
+
+.formular__text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #828282;
+}
+
+.formular__table {
+  margin-bottom: 33px;
+}
+
+.formular__table .table__row {
+  width: 100%;
+}
+
+.formular__table .table__cell-wrapper {
+  width: 100%;
+}
+
+.formular__table .table__cell-title {
+  font-family: Mulish;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #fff;
+}
+
+.formular__table .table__head .table__row {
+  margin-bottom: 12px;
+}
+
+.formular__table .table__head .table__cell {
+  height: 98px;
+}
+
+.formular__table .table__head .table__cell-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 5px 6px;
+  border-radius: 4px;
+}
+
+.formular__table .table__head .table__cell--green .table__cell-wrapper {
+  background-color: #a9d18e;
+}
+
+.formular__table .table__head .table__cell--red .table__cell-wrapper {
+  background-color: #f2826d;
+}
+
+.formular__table .table__head .table__cell--orange-bright .table__cell-wrapper {
+  background-color: #efbc3f;
+}
+
+.formular__table .table__head .table__cell--blue-dark .table__cell-wrapper {
+  background-color: #3b5673;
+}
+
+.formular__table .table__head .table__cell--cyan-dark .table__cell-wrapper {
+  background-color: #109294;
+}
+
+.formular__table .table__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formular__table .table__body .accordion__title {
+  margin-bottom: 8px;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.formular__table .table__body .accordion__title::before {
+  display: none;
+}
+
+.formular__table .table__body .accordion__title::after {
+  width: 18px;
+  height: 25px;
+  right: 19px;
+  top: 50%;
+  background: url(../img/icons/accordion-triangle.svg) no-repeat center;
+  -webkit-transform: rotate(0) translate(0, -50%);
+      -ms-transform: rotate(0) translate(0, -50%);
+          transform: rotate(0) translate(0, -50%);
+  -webkit-transform-origin: 6px 0;
+      -ms-transform-origin: 6px 0;
+          transform-origin: 6px 0;
+}
+
+.formular__table .table__body .accordion__title.active::after {
+  -webkit-transform: rotate(90deg) translate(0, -50%);
+      -ms-transform: rotate(90deg) translate(0, -50%);
+          transform: rotate(90deg) translate(0, -50%);
+}
+
+.formular__table .table__body .accordion__title .table__cell-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formular__table .table__body .accordion__title .table__cell-img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90px;
+          flex: 0 0 90px;
+}
+
+.formular__table .table__body .accordion__title .table__cell-title {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.formular__table .table__body .table__cell .accordion__text {
+  padding: 0;
+}
+
+.formular__table .table__body .table__cell--green .accordion__title {
+  background-color: #a9d18e;
+}
+
+.formular__table .table__body .table__cell--green .accordion__text .table__cell-wrapper {
+  background-color: rgba(169, 209, 142, 0.1);
+}
+
+.formular__table .table__body .table__cell--green .input-wrapper__label::before {
+  border-color: #a9d18e;
+}
+
+.formular__table .table__body .table__cell--red .accordion__title {
+  background-color: #f2826d;
+}
+
+.formular__table .table__body .table__cell--red .accordion__text .table__cell-wrapper {
+  background-color: rgba(242, 130, 109, 0.1);
+}
+
+.formular__table .table__body .table__cell--red .input-wrapper__label::before {
+  border-color: #f2826d;
+}
+
+.formular__table .table__body .table__cell--orange-bright .accordion__title {
+  background-color: #efbc3f;
+}
+
+.formular__table .table__body .table__cell--orange-bright .accordion__text .table__cell-wrapper {
+  background-color: rgba(239, 188, 63, 0.1);
+}
+
+.formular__table .table__body .table__cell--orange-bright .input-wrapper__label::before {
+  border-color: #efbc3f;
+}
+
+.formular__table .table__body .table__cell--blue-dark .accordion__title {
+  background-color: #3b5673;
+}
+
+.formular__table .table__body .table__cell--blue-dark .accordion__text .table__cell-wrapper {
+  background-color: rgba(59, 86, 115, 0.1);
+}
+
+.formular__table .table__body .table__cell--blue-dark .input-wrapper__label::before {
+  border-color: #3b5673;
+}
+
+.formular__table .table__body .table__cell--cyan-dark .accordion__title {
+  background-color: #109294;
+}
+
+.formular__table .table__body .table__cell--cyan-dark .accordion__text .table__cell-wrapper {
+  background-color: rgba(16, 146, 148, 0.1);
+}
+
+.formular__table .table__body .table__cell--cyan-dark .input-wrapper__label::before {
+  border-color: #109294;
+}
+
+.formular__table .table__body .table__cell-wrapper {
+  padding: 21px 15px;
+}
+
+.formular__table .table__body .input-wrapper {
+  margin-bottom: 18px;
+}
+
+.formular__table .table__body .input-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.formular__table .table__body .input-wrapper__label {
+  font-size: 12px;
+  line-height: 18px;
+  color: #333;
+  width: 100%;
+  word-break: break-word;
+}
+
+.formular .privacy {
+  padding-left: 4px;
+  margin-bottom: 143px;
+}
+
+.formular__buttons {
+  width: 100%;
+  max-width: 254px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.formular__btn {
+  width: auto;
+  height: 40px;
+  padding: 9px 18px;
+  white-space: nowrap;
+}
+
+.formular__btn:first-child {
+  margin-right: 17px;
+}
+
+.formular__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -14px 89px;
+}
+
+.formular__inputs .input-wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 7px 14px;
+}
+
+.formular__inputs .input-wrapper__text-input {
+  height: 61px;
+  padding: 19px 21px;
+}
+
+.formular__inputs .input-wrapper__text-label {
+  font-weight: 600;
+  left: 36px;
+}
+
+.formular__inputs .custom-select {
+  background-color: #fafafa;
+  width: 100%;
+  height: 61px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 22px;
+}
+
+.formular__inputs label {
+  pointer-events: none;
+}
+
+.formular__investieren {
+  margin: 0;
+  display: block;
+}
+
+.formular__investieren .privacy {
+  padding: 0;
+}
+
+.formular__investieren .privacy .input-wrapper {
+  padding: 0;
+}
+
+.formular__investieren .privacy .input-wrapper__label {
+  pointer-events: auto;
+}
+
+.formular__investieren .privacy .input-wrapper__label::before {
+  top: 50%;
+  border-color: #bdbdbd;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.formular__investieren .formular__buttons {
+  max-width: 370px;
+}
+
+.formular__investieren-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+
+.formular__investieren-row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 -14px 30px;
+}
+
+.formular__tip {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0 14px;
+  padding-right: 28px;
+}
+
+.table__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
 @media screen and (min-width: 576px) {
   .kanns-offer__left-content {
     padding-right: 15px;
@@ -2402,6 +2912,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .custom-select__trigger span {
+    font-weight: 600;
+  }
+
   .footer__right {
     width: 100%;
     max-width: 769px;
@@ -2419,6 +2933,28 @@ img {
 @media screen and (min-width: 860px) {
   .home {
     min-height: 550px;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .formular__table .table__cell {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    padding: 0 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .formular__table .table__body .accordion__title {
+    display: none;
+  }
+
+  .formular__table .table__body .table__cell .accordion__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -2467,6 +3003,10 @@ img {
   .map__container {
     max-width: 1320px;
   }
+
+  .formular__container {
+    max-width: 1218px;
+  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -2507,6 +3047,11 @@ img {
     line-height: calc(34 / 20);
   }
 
+  .title-XL {
+    font-size: calc(24px + 16 * ((100vw - 375px) / (1440 - 375)));
+    line-height: calc(55 / 40);
+  }
+
   .home__text {
     font-size: calc(14px + 2 * ((100vw - 375px) / (1440 - 375)));
     line-height: calc(26 / 16);
@@ -2528,7 +3073,7 @@ img {
   }
 
   .do-action__btn {
-    font-size: calc(11px + 3 * ((100vw - 375px) / (1440 - 375)));
+    font-size: calc(13px + 3 * ((100vw - 375px) / (1440 - 375)));
   }
 
   .beispiel__text {
@@ -2710,6 +3255,21 @@ img {
     font-size: calc(12px + 4 * ((100vw - 375px) / (1440 - 375)));
     line-height: calc(25 / 16);
   }
+
+  .formular__table .table__cell-title {
+    font-size: calc(16px + 2 * ((100vw - 375px) / (1440 - 375)));
+    line-height: calc(27 / 18);
+  }
+
+  .formular__investieren .privacy .input-wrapper__label {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .formular__investieren-title {
+    font-size: calc(14px + 2 * ((100vw - 375px) / (1440 - 375)));
+    line-height: calc(24 / 16);
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -2731,6 +3291,10 @@ img {
 
   .xund-blog__insta {
     margin-top: 20px;
+  }
+
+  .formular__table .table__body .table__cell-wrapper {
+    padding: 21px 10px;
   }
 }
 
@@ -2889,6 +3453,35 @@ img {
 
   .map__contacts {
     margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .formular__table .table__cell.accordion__text {
+    display: none;
+  }
+
+  .formular__table .table__head {
+    display: none;
+  }
+
+  .formular__table .table__body .accordion__text {
+    margin-bottom: 20px;
+  }
+
+  .formular__table .table__body .table__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .formular__table .table__body .table__cell-wrapper {
+    padding: 21px 23px 26px;
+  }
+
+  .formular .privacy {
+    margin-bottom: 37px;
   }
 }
 
@@ -3074,11 +3667,11 @@ img {
   }
 
   .header__item {
-    margin: 0px 0px 35px 0px;
+    margin: 0px 0px 41px 0px;
   }
 
   .header__link {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .header__btn {
@@ -3453,6 +4046,54 @@ img {
   .map__wrapper {
     padding: 30px 32px 32px;
   }
+
+  .formular {
+    padding: 28px 0;
+  }
+
+  .formular__header {
+    margin-bottom: 52px;
+  }
+
+  .formular__title {
+    margin-bottom: 18px;
+  }
+
+  .formular__table {
+    margin-bottom: 37px;
+  }
+
+  .formular__inputs {
+    margin: 0 -5px 63px;
+  }
+
+  .formular__inputs .input-wrapper {
+    padding: 7px 5px;
+  }
+
+  .formular__inputs .input-wrapper__text-input {
+    padding: 19px 15px;
+  }
+
+  .formular__inputs .input-wrapper__text-label {
+    left: 15px;
+  }
+
+  .formular__inputs .custom-select {
+    padding-right: 10px;
+  }
+
+  .formular__investieren {
+    margin: 0;
+  }
+
+  .formular__investieren-row {
+    margin: 0 -5px 32px;
+  }
+
+  .formular__tip {
+    padding: 0 5px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -3514,6 +4155,11 @@ img {
 }
 
 @media screen and (max-width: 575px) {
+  .custom-select-wrapper--right .custom-select__custom-options {
+    left: auto;
+    right: 0;
+  }
+
   .header__logo {
     max-width: 99px;
   }
@@ -3569,7 +4215,7 @@ img {
 
   .do-action__btn {
     max-width: 140px;
-    height: 33px;
+    height: 37px;
     margin-right: 9px;
   }
 
@@ -3725,6 +4371,49 @@ img {
   .map {
     padding: 20px 0 26px;
   }
+
+  .formular__inputs {
+    margin: 0 0 63px;
+  }
+
+  .formular__inputs .input-wrapper {
+    padding: 3.5px 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+
+  .formular__inputs .input-wrapper__text-input {
+    height: 45px;
+  }
+
+  .formular__inputs .custom-select {
+    height: 45px;
+  }
+
+  .formular__investieren {
+    margin: 0;
+  }
+
+  .formular__investieren .formular__buttons {
+    max-width: 302px;
+  }
+
+  .formular__investieren-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 0 32px;
+  }
+
+  .formular__tip {
+    padding: 0;
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -3819,6 +4508,14 @@ img {
   .map__contacts-text {
     margin-bottom: 0;
   }
+
+  .formular__table .table__body .accordion__title {
+    padding: 0;
+  }
+
+  .formular__investieren .formular__buttons .formular__btn {
+    padding: 0 14px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -3861,6 +4558,11 @@ img {
     width: 99px;
     height: 35px;
   }
+
+  .formular__investieren .formular__buttons .formular__btn {
+    margin-right: 10px;
+    padding: 0 12px;
+  }
 }
 
 @media screen and (max-width: 374px) {
@@ -3894,5 +4596,17 @@ img {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 36.8%;
             flex: 0 0 36.8%;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .formular__table .table__body .input-wrapper__label {
+    padding-left: 25px;
+  }
+
+  .formular__table .table__body .input-wrapper__label::before {
+    width: 18px;
+    height: 18px;
+    border-width: 2px;
   }
 }
