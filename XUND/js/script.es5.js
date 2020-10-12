@@ -887,6 +887,7 @@ $(document).ready(function () {
   });
 });
 $(document).ready(function () {
+  var formularStepOne = $('#formularStepOne');
   $('#formularStepOne').on("click", function (e) {
     e.preventDefault();
     $('.formular__step-one').slideUp(300);
@@ -902,6 +903,21 @@ $(document).ready(function () {
     $('html, body').animate({
       scrollTop: 0
     }, 500);
+  });
+  var input = $('#formularAccordion .input-wrapper__input');
+  input.on("change", function () {
+    $(this).toggleClass('active');
+
+    for (var i = 0; i < input.length; i++) {
+      var element = input[i];
+
+      if (element.classList.contains('active')) {
+        formularStepOne.prop('disabled', false);
+        return;
+      } else {
+        formularStepOne.prop('disabled', true);
+      }
+    }
   });
 });
 $(document).ready(function () {

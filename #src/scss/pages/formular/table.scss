@@ -1,0 +1,7 @@
+.table {
+	// .table__row
+	&__row {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+}
